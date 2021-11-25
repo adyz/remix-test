@@ -9,6 +9,7 @@ type IndexData = {
 // Loaders provide data to components and are only ever called on the server, so
 // you can connect to a database or run any server side code you want right next
 // to the component that renders it.
+// test
 // https://remix.run/api/conventions#loader
 export let loader: LoaderFunction = () => {
   let data: IndexData = {
