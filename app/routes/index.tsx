@@ -1,6 +1,17 @@
 import type { MetaFunction, LoaderFunction } from "remix";
 import { useLoaderData, json, Link } from "remix";
 
+import {animated} from '@react-spring/web';
+
+const Boop = ({ children}: any) => {
+    return (
+      // @ts-ignore
+      <animated.span>
+        {children}
+      </animated.span>
+    );
+  };
+
 type IndexData = {
   resources: Array<{ name: string; url: string }>;
   demos: Array<{ name: string; to: string }>;
@@ -74,6 +85,17 @@ export default function Index() {
           <code>app/routes/demos</code> and <code>app/styles/demos</code>{" "}
           folders when you're ready to turn this into your next project.
         </p>
+          <Boop y={2}>
+              <button
+                onClick={() => {
+                  window.location.href = "./Resume-Adrian-Florescu.pdf";
+                }}
+                className="button__readMore"
+                data-description="Or click on the links in the top right corner 🚀"
+              >
+                Download Resume
+          </button>
+          </Boop>
       </main>
       <aside>
         <h2>Demos In This App</h2>
