@@ -13,7 +13,7 @@
   status = 200
 
 [[plugins]]
-  package = "@netlify/plugin-local-install-core"  
+package = "@netlify/plugin-local-install-core"  
 
 [[headers]]
   for = "/build/*"
