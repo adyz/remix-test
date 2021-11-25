@@ -1,14 +1,14 @@
 import type { MetaFunction, LoaderFunction } from "remix";
 import { useLoaderData, json, Link } from "remix";
 
-import { animated } from 'react-spring';
+import * as sping from 'react-spring';
 
 const Boop = ({ children}: any) => {
     return (
       // @ts-ignore
-      <animated.span>
+      <sping.animated.span>
         {children}
-      </animated.span>
+      </sping.animated.span>
     );
   };
 
